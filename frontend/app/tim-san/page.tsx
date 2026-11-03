@@ -985,7 +985,7 @@ export default function FindPitchPage() {
                 <>
                   <strong>Sân thể thao trong khu vực bạn chọn</strong>
                   <p>Chọn một sân để mở địa chỉ trên Google Maps. Danh sách và địa chỉ được lấy từ backend.</p>
-                  {visiblePitchCards.map(pitch => <p key={pitch.categoryId ?? pitch.id}>📍 <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(pitch.diaChi ?? pitch.centerName ?? pitch.ten)}`} target="_blank" rel="noreferrer">{pitch.categoryName || pitch.centerName || pitch.ten} — {pitch.diaChi || 'Chưa cập nhật địa chỉ'}</a></p>)}
+                  {visiblePitchCards.map(pitch => <p key={pitch.id}>📍 <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(pitch.diaChi ?? pitch.centerName ?? pitch.ten)}`} target="_blank" rel="noreferrer">{pitch.categoryName || pitch.centerName || pitch.ten} — {pitch.diaChi || 'Chưa cập nhật địa chỉ'}</a></p>)}
                 </>
               )}
             </div>
